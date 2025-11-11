@@ -11,14 +11,13 @@ class Homepage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             height: 300,
             width: 200,
             padding: EdgeInsets.all(20),
+            margin: EdgeInsets.only(left: 20,top: 40),
+            
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blue,
@@ -28,11 +27,13 @@ class Homepage extends StatelessWidget {
               style: TextStyle(fontSize: 25, color: Colors.white70),
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 80),
 
-          ElevatedButton(
-            onPressed: (){},
-             child: Text('Go to column page')),
+          Center(
+            child: ElevatedButton(
+              onPressed: (){},
+               child: Text('Go to row page')),
+          ),
         ],
       ),
     );
