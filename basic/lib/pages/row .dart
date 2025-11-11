@@ -5,6 +5,61 @@ class RowPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Row Page",
+          style: TextStyle(fontSize: 25),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: true, 
+      ),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, 
+          crossAxisAlignment: CrossAxisAlignment.center, 
+          children: [
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center, 
+              children: [
+                Text(
+                  "Hello, ",
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  "it's Row Page!",
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 80),
+
+            ElevatedButton(
+              onPressed: () {
+                
+                Navigator.pop(context);
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: const Text(
+                "Back to Home",
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
