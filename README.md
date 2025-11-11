@@ -26,6 +26,7 @@ It’s focused on understanding:
   - `Row`
   - `Column`
   - `Stack`
+  - `Drawer`
 - Navigation using `Navigator.push()` and `Navigator.pop()`  
 - Adding images, icons, and assets  
 - Styling and theming basics  
