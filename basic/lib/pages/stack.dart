@@ -9,23 +9,35 @@ class StackPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Stack",
-          style: TextStyle(fontSize: 30, color: Colors.blueAccent),
+          style: TextStyle(fontSize: 30, color: const Color.fromARGB(255, 255, 171, 68)),
         ),
         centerTitle: true,
         automaticallyImplyLeading: true,
+        actions: [
+          Icon(Icons.menu)
+        ],
+        backgroundColor: const Color.fromARGB(255, 92, 167, 228),
       ),
 
       body: Column(
         children: [
           Stack(
             children: [
-              Image.asset("Assets/image/road.jpg"),
-              Text(
-                "stack help to place widget to another widget",
-                style: TextStyle(
-                  color: Colors.lightBlue,
-                  fontWeight: FontWeight.w800,
-                  fontSize: 24,
+              Image.asset("Assets/image/road.jpg",
+              height: 400,
+              fit:BoxFit.cover ,),
+              SizedBox(height: 500,
+                child: Center(
+                  child: Text(
+                    "stack help to place widget to another widget",
+                    style: TextStyle(
+                      color: Colors.lightBlue,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 24,
+                      
+
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -42,6 +54,7 @@ class StackPage extends StatelessWidget {
 
             child: Text("Go back ", style: TextStyle(color: Colors.white60)),
           ),
+          
         ],
       ),
     );
