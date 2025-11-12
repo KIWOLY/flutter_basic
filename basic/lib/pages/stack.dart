@@ -1,3 +1,4 @@
+import 'package:basic/pages/listtile.dart';
 import 'package:flutter/material.dart';
 
 class StackPage extends StatelessWidget {
@@ -14,7 +15,7 @@ class StackPage extends StatelessWidget {
         centerTitle: true,
         automaticallyImplyLeading: true,
         actions: [
-          Icon(Icons.menu)
+          Icon(Icons.menu, color: Colors.redAccent,)
         ],
         backgroundColor: const Color.fromARGB(255, 92, 167, 228),
       ),
@@ -45,14 +46,14 @@ class StackPage extends StatelessWidget {
           SizedBox(height: 80),
           ElevatedButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> ListTilePage()));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.lightBlue,
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
             ),
 
-            child: Text("Go back ", style: TextStyle(color: Colors.white60)),
+            child: Text("Go to ListTile ", style: TextStyle(color: Colors.white60)),
           ),
           
         ],
