@@ -1,3 +1,4 @@
+import 'package:basic/pages/wrap.dart';
 import 'package:flutter/material.dart';
 
 class ListTilePage extends StatelessWidget {
@@ -44,11 +45,14 @@ class ListTilePage extends StatelessWidget {
           SizedBox(height: 60),
           ElevatedButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => WrapPage()),
+              );
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.lightBlue),
             child: Text(
-              "Go to next page",
+              "Go to wrap",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
