@@ -1,3 +1,4 @@
+import 'package:basic/pages/stack.dart';
 import 'package:flutter/material.dart';
 
 class ImagePage extends StatelessWidget {
@@ -21,13 +22,13 @@ class ImagePage extends StatelessWidget {
           SizedBox(height: 60),
           ElevatedButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> StackPage()));
             },
             style:ElevatedButton.styleFrom(
             backgroundColor:Colors.blueAccent,
             padding: EdgeInsets.symmetric(horizontal: 30,vertical: 15)
             ) ,
-            child: Text("Go to the next page ", style: TextStyle(
+            child: Text("Go to stack page ", style: TextStyle(
               color: Colors.white,
               fontSize: 20
             ),),
