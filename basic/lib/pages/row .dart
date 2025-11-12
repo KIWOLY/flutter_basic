@@ -1,3 +1,4 @@
+import 'package:basic/pages/image.dart';
 import 'package:flutter/material.dart';
 
 class RowPage extends StatelessWidget {
@@ -43,17 +44,17 @@ class RowPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const ImagePage()));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10),
                 ),
               ),
               child: const Text(
-                "Back to Home",
+                "To Image Page",
                 style: TextStyle(fontSize: 18, color: Colors.white),
               ),
             ),
