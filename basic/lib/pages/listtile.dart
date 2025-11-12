@@ -27,14 +27,18 @@ class ListTilePage extends StatelessWidget {
             title: Text("Innocent kiwoly"),
             subtitle: Text("Mobile developer"),
             trailing: Icon(Icons.arrow_back_ios_new_rounded),
-            onTap: () {},
+            onTap: () {
+              print("on Tap 1");
+            },
           ),
           ListTile(
             leading: Icon(Icons.person),
             title: Text("Lucas David"),
             subtitle: Text("Website developer"),
             trailing: Icon(Icons.arrow_back_ios_new_rounded),
-            onTap: () {},
+            onTap: () {
+              print("on Tap 2");
+            },
           ),
 
           SizedBox(height: 60),
