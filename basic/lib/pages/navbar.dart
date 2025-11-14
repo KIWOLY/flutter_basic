@@ -21,10 +21,23 @@ class NavBarPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBar(destinations: [
-        NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-        NavigationDestination(icon: Icon(Icons.settings), label: "Settings")
-      ]),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("Kiwoly");
+        },
+        child: Icon(Icons.add),
+      ),
+
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          NavigationDestination(icon: Icon(Icons.settings), label: "Settings"),
+        ],
+        onDestinationSelected: (int value) {
+          print(value);
+        },
+      ),
     );
   }
 }
