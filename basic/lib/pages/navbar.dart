@@ -1,3 +1,4 @@
+import 'package:basic/pages/drawer.dart';
 import 'package:flutter/material.dart';
 
 class NavBarPage extends StatelessWidget {
@@ -18,6 +19,20 @@ class NavBarPage extends StatelessWidget {
         children: [
           Text(
             "its all about the Navigation bar in  which the argument used is bottomNavigationBar   and the widget is NavigationBar",
+          ),
+          SizedBox(height: 40,),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DrawerPage()),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.lightBlueAccent,
+              padding: EdgeInsets.symmetric(horizontal: 30,vertical: 15)
+            ),
+            child: Text("Go to Drawer" , style: TextStyle(color: Colors.black),),
           ),
         ],
       ),
