@@ -1,3 +1,4 @@
+import 'package:basic/pages/navbar.dart';
 import 'package:flutter/material.dart';
 
 class AppPage extends StatelessWidget {
@@ -28,13 +29,20 @@ class AppPage extends StatelessWidget {
             ),
             child: Text("Go back"),
           ),
-          SizedBox(height: 50,),
-          ElevatedButton(onPressed: (){},
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+          SizedBox(height: 50),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NavBarPage()),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            ),
+            child: Text("Go to NavBar"),
           ),
-           child: Text("Go forward")),
         ],
       ),
     );
