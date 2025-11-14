@@ -1,3 +1,4 @@
+import 'package:basic/pages/appbar.dart';
 import 'package:flutter/material.dart';
 
 class WrapPage extends StatelessWidget {
@@ -41,14 +42,17 @@ class WrapPage extends StatelessWidget {
           SizedBox(height: 60),
           ElevatedButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AppPage()),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blueAccent,
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             ),
             child: Text(
-              "Go Back",
+              "Go to AppBar",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
