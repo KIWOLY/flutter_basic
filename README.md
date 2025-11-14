@@ -1,5 +1,4 @@
 
-
 # Flutter Basics Learning Repository
 
 Welcome to my **Flutter Learning Repository**!
@@ -32,10 +31,11 @@ Here’s a summary of the core Flutter concepts and widgets I’ve studied so fa
 * `Container` — build custom boxes and layout areas
 * `Stack` — place widgets on top of each other
 * `Wrap` — automatically arrange widgets when they run out of space
+* `SafeArea` — avoid overlaps with system UI like notches or status bars
 
 
 
-###  UI & Design
+### UI & Design
 
 * Adding and displaying **Images**
 * Using **Icons** to enhance interfaces
@@ -46,6 +46,9 @@ Here’s a summary of the core Flutter concepts and widgets I’ve studied so fa
 * Exploring **AppBar Actions** and interactive **Icons**
 * Controlling back navigation with `automaticallyImplyLeading`
 * Designing list-style layouts using **ListTile**
+* **FloatingActionButton** — for quick primary actions
+* **BottomNavigationBar** — for navigating between main sections
+* **Drawer** — for side navigation menus
 
 
 
@@ -57,21 +60,25 @@ Here’s a summary of the core Flutter concepts and widgets I’ve studied so fa
 
 
 
-###  Flutter Widget Concepts
+### Flutter Widget Concepts
 
 * Understanding **ListTile** — for creating structured list items with icons, titles, and subtitles
+
 * Learning the difference between **StatelessWidget** and **StatefulWidget**
 
   * `StatelessWidget`: UI that does **not** change dynamically
   * `StatefulWidget`: UI that **updates or reacts** to user interaction
 
+* Understanding **Null Safety** — avoiding runtime null errors with Dart’s type system
 
 
-##  Tools & Setup
+
+## Tools & Setup
 
 * **Editor:** Visual Studio Code
 * **Framework:** Flutter
 * **Language:** Dart
 * **Device:** Physical mobile phone (used as emulator/simulator)
+
 
 
