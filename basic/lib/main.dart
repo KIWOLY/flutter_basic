@@ -1,3 +1,4 @@
+import 'package:basic/data/notifiers.dart';
 import 'package:basic/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -11,16 +12,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
-          brightness: Brightness.dark,
-        ),
-      ),
-      home: const Homepage(),
+    return ValueListenableBuilder(
+      valueListenable: isDarModeNotifier,
+      builder: (BuildContext context, bool isDarkmode, Widget? child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: Colors.teal,
+              brightness: isDarkmode ? Brightness.dark : Brightness.light,
+            ),
+          ),
+          home: const Homepage(),
+        );
+        ;
+      },
     );
   }
 }
