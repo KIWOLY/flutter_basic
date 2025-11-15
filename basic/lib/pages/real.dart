@@ -1,3 +1,4 @@
+import 'package:basic/data/notifiers.dart';
 import 'package:basic/pages/home_page.dart';
 import 'package:basic/pages/profile.dart';
 import 'package:basic/widgets/real_navbar.dart';
@@ -16,7 +17,7 @@ class RealApp extends StatefulWidget {
 }
 
 class _RealAppState extends State<RealApp> {
-  int index = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +26,12 @@ class _RealAppState extends State<RealApp> {
         automaticallyImplyLeading: false,
         centerTitle: true,
       ),
-      body: pages.elementAt(1),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (BuildContext context, dynamic selectedPage, Widget? child) {
+          return  pages.elementAt(selectedPage);
+        },
+      ),
       bottomNavigationBar: RealNavbar(),
     );
   }
