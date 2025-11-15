@@ -1,10 +1,11 @@
 import 'package:basic/data/notifiers.dart';
 import 'package:basic/pages/home_page.dart';
 import 'package:basic/pages/profile.dart';
+import 'package:basic/pages/setting.dart';
 import 'package:basic/widgets/real_navbar.dart';
 import 'package:flutter/material.dart';
 
-List<Widget> pages = [HomePage(), Profile()];
+List<Widget> pages = [HomePage(), Profile(), SettingPage()];
 
 class RealApp extends StatefulWidget {
   const RealApp({super.key});
@@ -29,7 +30,7 @@ class _RealAppState extends State<RealApp> {
             icon: ValueListenableBuilder(
               valueListenable: isDarModeNotifier,
               builder: (BuildContext context, bool isDarkMode, Widget? child) {
-                return Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode);
+                return Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode);
               },
             ),
           ),
