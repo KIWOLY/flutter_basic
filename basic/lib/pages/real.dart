@@ -1,4 +1,12 @@
+import 'package:basic/pages/home_page.dart';
+import 'package:basic/pages/profile.dart';
+import 'package:basic/widgets/real_navbar.dart';
 import 'package:flutter/material.dart';
+
+List<Widget> pages = [
+  HomePage(),
+  Profile(),
+];
 
 class RealApp extends StatefulWidget {
   const RealApp({super.key});
@@ -17,19 +25,8 @@ class _RealAppState extends State<RealApp> {
         automaticallyImplyLeading: false,
         centerTitle: true,
       ),
-      body: index ==0 ? Center(child: Text("1"),):Center(child: Text("2"),),
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
-        ],
-        onDestinationSelected: (value) {
-          setState(() {
-            index = value;
-          });
-        },
-        selectedIndex: index,
-      ),
+      body: pages.elementAt(1),
+      bottomNavigationBar: RealNavbar(),
     );
   }
 }
