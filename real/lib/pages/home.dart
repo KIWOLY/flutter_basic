@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:real/data/notifiers.dart';
 import 'package:real/pages/home_page.dart';
 import 'package:real/pages/profile.dart';
+import 'package:real/widgets/bottom_navigation.dart';
 
 List<Widget> pages = [Profile(), Home()];
 
@@ -18,6 +19,20 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        actions: [
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDarkMode, child) {
+                return Icon(
+                  isDarkMode ?Icons.light_mode :Icons.dark_mode);
+              },
+            ),
+          ),
+        ],
       ),
       body: ValueListenableBuilder(
         valueListenable: selectedPageNotifier,
@@ -25,21 +40,7 @@ class HomePage extends StatelessWidget {
           return pages.elementAt(selectedPage);
         },
       ),
-      bottomNavigationBar: ValueListenableBuilder(
-        valueListenable: selectedPageNotifier,
-        builder: (context, selectedPage, child) {
-          return NavigationBar(
-            destinations: [
-              NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-              NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
-            ],
-            onDestinationSelected: (value) => {
-              selectedPageNotifier.value = value,
-            },
-            selectedIndex: selectedPage,
-          );
-        },
-      ),
+      bottomNavigationBar: Bottom(),
     );
   }
 }
