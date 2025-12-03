@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real/data/notifiers.dart';
 import 'package:real/pages/home_page.dart';
 import 'package:real/pages/profile.dart';
 
@@ -18,12 +19,26 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: pages.elementAt(0),
-      bottomNavigationBar: NavigationBar(
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
-        ],
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        },
+      ),
+      bottomNavigationBar: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, selectedPage, child) {
+          return NavigationBar(
+            destinations: [
+              NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+              NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+            ],
+            onDestinationSelected: (value) => {
+              selectedPageNotifier.value = value,
+            },
+            selectedIndex: selectedPage,
+          );
+        },
       ),
     );
   }
