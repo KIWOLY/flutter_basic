@@ -11,7 +11,7 @@ class AppPage extends StatelessWidget {
         leading: Icon(Icons.add_a_photo),
         title: Text("App bar"),
         centerTitle: true,
-        actions: [Text("Team"), Icon(Icons.telegram)],
+        // actions: [Text("Team"), Icon(Icons.telegram)],
         backgroundColor: Colors.teal,
       ),
       body: Column(
