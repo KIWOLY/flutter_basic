@@ -13,7 +13,7 @@ class StackPage extends StatelessWidget {
           style: TextStyle(fontSize: 30, color: const Color.fromARGB(255, 255, 171, 68)),
         ),
         centerTitle: true,
-        automaticallyImplyLeading: true,
+        // automaticallyImplyLeading: true,
         actions: [
           Icon(Icons.menu, color: Colors.redAccent,)
         ],
