@@ -14,7 +14,7 @@ class WrapPage extends StatelessWidget {
         title: Text(
           "Wrap",
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 33,
             fontWeight: FontWeight.bold,
             color: Colors.white70,
           ),
