@@ -19,7 +19,7 @@ class DrawerPage extends StatelessWidget {
             ),
           ),
           centerTitle: true,
-          // actions: [Text("Hellow"), Icon(Icons.home_rounded)],
+          actions: [Text("Hellow"), Icon(Icons.home_rounded)],
         ),
         drawer: Drawer(
           backgroundColor: const Color.fromARGB(255, 53, 58, 61),
