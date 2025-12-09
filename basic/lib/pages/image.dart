@@ -13,7 +13,7 @@ class ImagePage extends StatelessWidget {
           style: TextStyle(color: Colors.blueAccent, fontSize: 30),
         ),
         centerTitle: true,
-        automaticallyImplyLeading: true,
+     
       ),
       body: Column(
         children: [
