@@ -13,7 +13,6 @@ class RowPage extends StatelessWidget {
           style: TextStyle(fontSize: 25),
         ),
         centerTitle: true,
-        automaticallyImplyLeading: true, 
       ),
 
       body: Center(
